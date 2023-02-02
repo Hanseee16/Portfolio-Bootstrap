@@ -3,10 +3,12 @@
   --biru: #343353;
   --kuning: #f9cb5b;
   --merah: #ff4c61;
-}
-
-body {
-  min-height: 6000px;
+  --biruMuda: #3045fd;
+  --hijauToska: #30ccfd;
+  --hijau: #30fd5d;
+  --oren: #fd9f30;
+  --kuningTerang: #fdf530;
+  --merahTerang: #fd3030;
 }
 
 /* button */
@@ -48,7 +50,36 @@ body {
   color: white;
 }
 
+/* send */
+.send {
+  margin-top: 15px;
+  background-color: var(--merah);
+  border-radius: 30px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  width: 180px;
+  height: 50px;
+  padding-top: 10px;
+}
+
+.send:hover {
+  background-color: var(--merah);
+  color: white;
+}
+
 /* navbar */
+.navbar {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  background-color: var(--biru);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
 .navbar-brand {
   color: white;
   font-size: 25px;
@@ -64,11 +95,13 @@ body {
 }
 
 .navbar .navbar-toggler {
-  color: white;
+  background-color: var(--biru);
+  color: var(--biru);
+  border: none;
 }
 
 .navbar-toggler-icon {
-  color: rgb(255, 255, 255);
+  background-color: var(--biru);
 }
 
 .navbar .aktif {
@@ -85,6 +118,7 @@ body {
   margin-right: 15px;
   color: white;
   font-size: 17px;
+  background-color: var(--biru);
 }
 
 .nav-link:hover {
@@ -95,8 +129,8 @@ body {
 .jumbotron {
   padding-top: 7rem;
   background-color: var(--biru);
-  height: 900px;
-  margin-top: -320px;
+  height: 1000px;
+  margin-top: -250px;
 }
 
 .jumbotron img {
@@ -105,15 +139,15 @@ body {
 }
 
 .jumbotron h1 {
+  padding-top: 25px;
   color: white;
   font-size: 35px;
   font-weight: bold;
-  padding: 20px 0 10px 0;
 }
 
 .jumbotron p {
-  color: #dddddd;
-  font-size: 17px;
+  color: #d6d6d6;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -126,6 +160,7 @@ body {
 /* about */
 .about {
   margin-top: 200px;
+  padding-top: 80px;
 }
 
 .about .content {
@@ -157,23 +192,42 @@ body {
   justify-content: space-between;
 }
 
-.kanan .html-2,
-.bootstrap-2,
-.figma-2 {
+.html-2 {
   background-color: var(--biru);
 }
-.kanan .css-2,
-.mysql-2 {
-  background-color: var(--kuning);
+
+.css-2 {
+  background-color: var(--biruMuda);
 }
-.kanan .js-2,
+
+.js-2 {
+  background-color: var(--hijauToska);
+}
+
+.bootstrap-2 {
+  background-color: var(--hijau);
+}
+
+.mysql-2 {
+  background-color: var(--kuningTerang);
+}
+
 .git-2 {
-  background-color: var(--merah);
+  background-color: var(--oren);
+}
+
+.figma-2 {
+  background-color: var(--merahTerang);
 }
 
 /* services */
 .services {
   margin-top: 200px;
+  padding-top: 80px;
+}
+
+.services .skills {
+  margin-top: 20px;
 }
 
 .services .photo,
@@ -183,6 +237,7 @@ body {
   margin-bottom: 50px;
   height: 300px;
   width: 350px;
+  box-shadow: 2px 2px 5px #9b9b9b;
 }
 
 .services .photo {
@@ -221,30 +276,92 @@ body {
 /* experience */
 .experience {
   margin-top: 200px;
+  padding-top: 80px;
 }
 
-.experience .pengalaman {
-  margin-top: 50px;
-  padding: 25px;
-  height: 160px;
+.experience .card {
+  box-shadow: 2px 2px 5px #9b9b9b;
 }
 
-.pengalaman p {
-  color: var(--biru);
+.experience .card-header {
+  font-size: 17px;
 }
 
-.pengalaman h3 {
-  font-size: 24px;
+.experience .card-title {
+  font-size: 20px;
+  font-weight: 600;
 }
 
-.pengalaman h4 {
-  font-size: 18px;
-  color: var(--biru);
+.experience .card-text {
+  padding-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(77, 77, 77);
 }
 
 /* projects */
 .projects {
   margin-top: 200px;
+  padding-top: 80px;
+}
+
+.projects .project {
+  transition: 0.3s ease-out;
+  margin-top: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.projects .project:hover {
+  transform: translateY(-0.5rem) scale(1.0125);
+}
+
+.projects .card {
+  box-shadow: 2px 2px 5px #9b9b9b;
+}
+
+.projects .card-text {
+  color: var(--biru);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* contact */
+.contact {
+  margin-top: 200px;
+  padding-top: 80px;
+}
+
+.contact p {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.contact p span {
+  color: var(--merah);
+}
+
+.contact .name,
+.email,
+.subject,
+.pesan {
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px #c4c4c4;
+  outline: none;
+}
+
+/* footer */
+footer {
+  margin-top: 200px;
+  height: 70px;
+  background-color: var(--biru);
+}
+
+footer p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 70px;
+  color: white;
 }
 
 /* desktop */
@@ -268,7 +385,8 @@ body {
 
   /* navbar */
   .navbar {
-    padding-top: 10px;
+    padding-top: 5px;
+    height: 65px;
   }
 
   .navbar-brand {
@@ -281,8 +399,8 @@ body {
 
   /* jumbotron */
   .jumbotron {
-    height: 700px;
-    margin-top: -85px;
+    height: 900px;
+    padding-top: 350px;
   }
 
   .jumbotron img {
@@ -290,7 +408,7 @@ body {
   }
 
   .jumbotron h1 {
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
 
   .jumbotron p {
@@ -301,12 +419,12 @@ body {
   .jumbotron .icon i {
     font-size: 30px;
     padding-bottom: 10px;
-    margin-right: 10px;
+    margin-right: 9px;
   }
 
   /* about */
   .about {
-    padding-top: 30px;
+    padding-top: 80px;
   }
 
   .about .content {
@@ -338,7 +456,7 @@ body {
 
   /* services */
   .services {
-    padding-top: 100px;
+    padding-top: 150px;
   }
 
   .services .photo,
@@ -360,6 +478,31 @@ body {
 
   /* experience */
   .experience {
+    padding-top: 170px;
+  }
+
+  .experience .card {
+    box-shadow: 2px 2px 5px #9b9b9b;
+  }
+
+  .experience .card-header {
+    font-size: 17px;
+  }
+
+  .experience .card-title {
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  .experience .card-text {
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(73, 73, 73);
+  }
+
+  /* projects */
+  .projects {
     padding-top: 100px;
   }
 }
