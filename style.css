@@ -11,6 +11,28 @@
   --merahTerang: #fd3030;
 }
 
+/* font */
+.about h2,
+.services h2,
+.experience h2,
+.project h2,
+.contact h2 {
+  font-family: "Lato", sans-serif;
+}
+
+.about p,
+.services p,
+.experience p,
+.project p,
+.contact p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.nav-link,
+.jumbotron p {
+  font-family: "Roboto", sans-serif;
+}
+
 /* button */
 /* hire */
 .hire {
@@ -21,6 +43,7 @@
   color: white;
   font-size: 18px;
   font-weight: 500;
+  font-family: "Lato", sans-serif;
   width: 140px;
   height: 50px;
   padding-top: 10px;
@@ -40,6 +63,7 @@
   color: white;
   font-size: 18px;
   font-weight: 500;
+  font-family: "Lato", sans-serif;
   width: 180px;
   height: 50px;
   padding-top: 10px;
@@ -59,6 +83,7 @@
   color: white;
   font-size: 18px;
   font-weight: 500;
+  font-family: "Lato", sans-serif;
   width: 180px;
   height: 50px;
   padding-top: 10px;
@@ -84,6 +109,7 @@
   color: white;
   font-size: 25px;
   font-weight: bold;
+  font-family: "Raleway", sans-serif;
 }
 
 .navbar-brand span {
@@ -143,12 +169,17 @@
   color: white;
   font-size: 35px;
   font-weight: bold;
+  font-family: "Raleway", sans-serif;
 }
 
 .jumbotron p {
   color: #d6d6d6;
   font-size: 18px;
   font-weight: 500;
+}
+
+.jumbotron .icon a {
+  text-decoration: none;
 }
 
 .jumbotron .icon i {
@@ -341,13 +372,29 @@
   color: var(--merah);
 }
 
+.contact img {
+  margin-top: -50px;
+}
+
+.contact .name,
+.email,
+.subject {
+  height: 50px;
+}
+
 .contact .name,
 .email,
 .subject,
 .pesan {
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: 1px 1px 3px #c4c4c4;
-  outline: none;
+}
+
+.contact .name::placeholder,
+.email::placeholder,
+.subject::placeholder,
+.pesan::placeholder {
+  color: #9b9b9b;
 }
 
 /* footer */
@@ -504,5 +551,21 @@ footer p {
   /* projects */
   .projects {
     padding-top: 100px;
+  }
+
+  .contact {
+    padding-top: 110px;
+  }
+
+  .contact .name,
+  .email,
+  .subject,
+  .pesan {
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px #c4c4c4;
+  }
+
+  .contact img {
+    margin-top: -30px;
   }
 }
