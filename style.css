@@ -106,7 +106,6 @@
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 .navbar-brand {
-  color: white;
   font-size: 25px;
   font-weight: bold;
   font-family: "Raleway", sans-serif;
@@ -114,10 +113,6 @@
 
 .navbar-brand span {
   color: var(--kuning);
-}
-
-.navbar-brand:hover {
-  color: white;
 }
 
 .navbar .navbar-toggler {
